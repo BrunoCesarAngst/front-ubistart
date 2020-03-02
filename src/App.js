@@ -4,20 +4,21 @@ import React from 'react';
 
 import { BrowserRouter } from 'react-router-dom';
 
-// import GlobalStyle from './styles/global';
+import GlobalStyle from './Styles/Global';
 
-// import Header from './components/Header';
-// import Sidebar from './components/Sidebar';
+import Header from './components/Header';
+
+import Sidebar from './components/Sidebar';
 
 import Routes from './routes';
 
 function App() {
   return (
     <BrowserRouter>
-      {/* <Header /> */}
-      {/* <Sidebar /> */}
+      <Header />
+      <Sidebar />
       <Routes />
-      {/* <GlobalStyle /> */}
+      <GlobalStyle />
     </BrowserRouter>
   );
 }
