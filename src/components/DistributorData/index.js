@@ -13,6 +13,8 @@ import {
   Input,
   SelectUf,
   ButtonInput,
+  ButtonType,
+  AreaButtons,
 } from './styles';
 
 export default function DistributorData() {
@@ -96,51 +98,30 @@ export default function DistributorData() {
       <Form ref={formRef} onSubmit={handleSubmit}>
         <TheTitles>Tipo</TheTitles>
 
-        <div style={{ justifyContent: 'space-between' }}>
-          <Button
-            typography={{
-              fontFamily: 'Raleway',
-            }}
-            style={{ width: 207, height: 40 }}
-            variant="contained"
-            color="primary"
-            type="button"
-          >
-            <label htmlFor="agreement-checkbox">
-              <input
-                type="radio"
-                name="person"
-                value="natural_person"
-                checked={isChecked}
-                onChange={handleCheckedChange}
-                id="natural_person"
-              />
-              Pessoa física
-            </label>
-          </Button>
-          <Button
-            typography={{
-              fontFamily: 'Raleway',
-            }}
-            style={{ width: 207, height: 40 }}
-            variant="contained"
-            color="primary"
-            type="button"
-          >
-            <label htmlFor="agreement-checkbox">
-              <input
-                type="radio"
-                name="person"
-                value="legal_entity"
-                checked={isChecked}
-                onChange={handleCheckedChange}
-                id="legal_entity"
-              />
-              Pessoa jurídica
-            </label>
-          </Button>
-          <div>Excluir distribuidor</div>
-        </div>
+        <AreaButtons>
+          <ButtonType>
+            <input
+              type="radio"
+              name="person"
+              value="natural_person"
+              checked={isChecked}
+              onChange={handleCheckedChange}
+            />
+            Pessoa física
+          </ButtonType>
+          <ButtonType>
+            <input
+              type="radio"
+              name="person"
+              value="legal_entity"
+              checked={isChecked}
+              onChange={handleCheckedChange}
+              id="legal_entity"
+            />
+            Pessoa jurídica
+          </ButtonType>
+        </AreaButtons>
+        <div>Excluir distribuidor</div>
 
         <TheTitles>DADOS DA EMPRESA</TheTitles>
         <div>
@@ -233,10 +214,7 @@ export default function DistributorData() {
               style={{ width: '131px' }}
             />
           </Scope>
-          <ButtonInput
-            type="submit"
-            onClick={this.handleAddNewDistributor.bind(this)}
-          >
+          <ButtonInput type="submit" /* onClick={handleAddNewDistributor} */>
             Salvar
           </ButtonInput>
         </div>

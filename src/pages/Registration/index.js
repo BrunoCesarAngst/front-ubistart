@@ -12,10 +12,12 @@ import DistributorData from '../../components/DistributorData';
 
 import {
   Container,
+  TitleText,
   OutletData,
   Nav,
   Distributor,
   NewDistributor,
+  ButtonType,
 } from './styles';
 
 export default function Registration() {
@@ -39,11 +41,11 @@ export default function Registration() {
     if (distributorStorage) {
       setDistributors(JSON.parse(distributorStorage));
     }
-  }, []);
+  }, [distributors]);
 
   return (
     <Container>
-      Nova praça
+      <TitleText>Nova praça</TitleText>
       <OutletData>
         <Nav>
           <text>Dados da praças</text>
@@ -67,19 +69,10 @@ export default function Registration() {
         {showDistributor && <DistributorData />}
       </Distributor>
       <NewDistributor>
-        <AddSharpIcon variant="contained" color="secondary" type="button" />
-        <Button
-          typography={{
-            fontFamily: 'Raleway',
-            justifyContent: 'space - between',
-          }}
-          variant="contained"
-          color="secondary"
-          type="button"
-          // onClick={}
-        >
+        <ButtonType onClick={handleAddNewDistributor}>
+          <AddSharpIcon />
           Adicionar Distribuidor
-        </Button>
+        </ButtonType>
       </NewDistributor>
     </Container>
   );

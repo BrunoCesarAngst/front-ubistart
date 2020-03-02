@@ -20,13 +20,6 @@ export default createGlobalStyle`
     font-family: Raleway, sans-serif;
   }
 
-  #root {
-    width: auto;
-    // height: 2174px;
-    margin: 0 auto;
-    padding: 0 20px 50px 20px;
-  }
-
   button {
     cursor: pointer;
   }

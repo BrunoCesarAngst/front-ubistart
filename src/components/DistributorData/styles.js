@@ -2,6 +2,8 @@ import styled from 'styled-components';
 
 import { Form as Unform } from '@unform/web';
 
+import { darken } from 'polished';
+
 import inputForm from '../Form/input';
 
 import selectUf from '../Form/selectUf';
@@ -29,7 +31,7 @@ export const Form = styled(Unform)`
   // flex-wrap: wrap;
   // flex: 1;
 
-  div {
+  > div {
     width: 991px;
     margin-top: 32px;
     margin-bottom: 55px;
@@ -79,4 +81,27 @@ export const ButtonInput = styled.button`
   text-align: center;
   // font: Bold 14px/16px Raleway;
   color: #ffffff;
+`;
+
+export const AreaButtons = styled.div`
+  width: 330px;
+`;
+
+export const ButtonType = styled.button`
+  display: flex;
+  color: #bac0c9;
+  flex-direction: row;
+  align-items: center;
+  background: #fafbfc;
+  border: 1px solid #e7e9f1;
+  border-radius: 4px;
+  opacity: 1;
+  justify-content: space-around;
+  width: 207px;
+  height: 40px;
+
+  &:hover {
+    background: ${darken(-0.3, '#626ED4')};
+    border: ${darken(0.5, '#626ED4')};
+  }
 `;

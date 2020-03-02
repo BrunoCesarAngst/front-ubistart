@@ -11,7 +11,7 @@ import { useField } from '@unform/core';
 export default function Input({ name, label, ...rest }) {
   const inputRef = useRef(null);
 
-  const { fieldName, registerField, defaultValue, error } = useField(name);
+  const { fieldName, registerField, error } = useField(name);
 
   useEffect(() => {
     /** mostrando para o unform o input */

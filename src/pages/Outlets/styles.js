@@ -13,7 +13,6 @@ export const Container = styled.div`
 `;
 
 export const Nav = styled.div`
-  // align-content: space-between;
   justify-content: space-between;
   display: flex;
   flex-direction: row;
@@ -62,7 +61,7 @@ export const StyledLink = styled(Link)`
 `;
 
 export const OutletsTable = styled.table`
-  width: 1200px;
+  width: 100%;
   height: 806px;
   margin-top: 25px;
   margin-bottom: 30px;
