@@ -2,19 +2,16 @@ import styled from 'styled-components';
 
 import { Form as Unform } from '@unform/web';
 
-import inputForm from '../../components/Form/input';
+import inputForm from '../Form/input';
 
-import selectUf from '../../components/Form/selectUf';
+import selectUf from '../Form/selectUf';
 
-import selectStatus from '../../components/Form/selectStatus';
+import selectStatus from '../Form/selectStatus';
 
 export const Container = styled.div`
-  width: 1118px;
-  // height: 863px;
-  margin-top: 20px;
-  margin-left: 120px;
-  letter-spacing: 0;
-  opacity: 1;
+  margin-bottom: 50px;
+  width: 991px;
+  border-radius: 4px;
 `;
 
 export const TheTitles = styled.legend`

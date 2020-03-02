@@ -36,9 +36,9 @@ export default function DistributorData() {
           .required('O CNPJ é obrigatório'),
         companyName: Yup.string().required('A Razão Social é obrigatório'),
         tradingName: Yup.string().required('O Nome fantasia é obrigatório'),
-        telephone: Yup.string()
-          .matches(phoneRegex, 'Digite um número de telefone válido')
-          .required('O número de telefone é obrigatório'),
+        telephone: Yup.string(),
+        // .matches(phoneRegex, 'Digite um número de telefone válido')
+        // .required('O número de telefone é obrigatório'),
         email: Yup.string()
           .email('Digite um e-mail válido')
           .required('O e-mail é obrigatório'),
@@ -95,8 +95,17 @@ export default function DistributorData() {
     <Container>
       <Form ref={formRef} onSubmit={handleSubmit}>
         <TheTitles>Tipo</TheTitles>
-        <div>
-          <Button>
+
+        <div style={{ justifyContent: 'space-between' }}>
+          <Button
+            typography={{
+              fontFamily: 'Raleway',
+            }}
+            style={{ width: 207, height: 40 }}
+            variant="contained"
+            color="primary"
+            type="button"
+          >
             <label htmlFor="agreement-checkbox">
               <input
                 type="radio"
@@ -109,7 +118,15 @@ export default function DistributorData() {
               Pessoa física
             </label>
           </Button>
-          <Button>
+          <Button
+            typography={{
+              fontFamily: 'Raleway',
+            }}
+            style={{ width: 207, height: 40 }}
+            variant="contained"
+            color="primary"
+            type="button"
+          >
             <label htmlFor="agreement-checkbox">
               <input
                 type="radio"
@@ -216,7 +233,12 @@ export default function DistributorData() {
               style={{ width: '131px' }}
             />
           </Scope>
-          <ButtonInput type="submit">Salvar</ButtonInput>
+          <ButtonInput
+            type="submit"
+            onClick={this.handleAddNewDistributor.bind(this)}
+          >
+            Salvar
+          </ButtonInput>
         </div>
       </Form>
     </Container>

@@ -6,15 +6,10 @@ import inputForm from '../Form/input';
 
 import selectUf from '../Form/selectUf';
 
-import selectStatus from '../Form/selectStatus';
-
 export const Container = styled.div`
-  width: 1118px;
-  // height: 863px;
-  margin-top: 20px;
-  margin-left: 120px;
-  letter-spacing: 0;
-  opacity: 1;
+  margin-bottom: 50px;
+  width: 991px;
+  border-radius: 4px;
 `;
 
 export const TheTitles = styled.legend`
@@ -29,7 +24,7 @@ export const TheTitles = styled.legend`
 `;
 
 export const Form = styled(Unform)`
-  // justify-content: space-between;
+  justify-content: space-between;
   // display: flex;
   // flex-wrap: wrap;
   // flex: 1;
@@ -79,11 +74,9 @@ export const ButtonInput = styled.button`
   margin-top: 150px;
   width: 186px;
   height: 40px;
-  background: #32b872 0% 0% no-repeat padding-box;
+  background: #32b872;
   border-radius: 4px;
   text-align: center;
-  font: Bold 14px/16px Raleway;
+  // font: Bold 14px/16px Raleway;
   color: #ffffff;
 `;
-
-export const Button = styled.button``;
